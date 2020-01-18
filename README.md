@@ -9,7 +9,7 @@ G E T filename CR LF
 (Nota: il comando include un totale di 6 caratteri ASCII, cioè 6 bytes, più quelli del nome del file)
 Il server risponde inviando:
 
-+ O K CR LF B1 B2 B3 B4 FileContents T1 T2 T3 T4
+\+ O K CR LF B1 B2 B3 B4 FileContents T1 T2 T3 T4
 
 Notare che il messaggio è composto da 5 caratteri, seguiti dal numero di byte del file richiesto (un
 intero senza segno su 32 bit in network byte order - bytes B1 B2 B3 B4 nella figura), seguito dai
@@ -25,6 +25,6 @@ chiusa in maniera ordinata, cioè, l’ultimo file richiesto dovrebbe essere sta
 completamente prima che la procedura di chiusura termini.
 In caso di errore (es. comando illegale, file inesistente) il server risponde sempre con
 
-- E R R CR LF
+\- E R R CR LF
 
 (6 caratteri) e quindi procede a chiudere in modo ordinato la connessione con il client.
